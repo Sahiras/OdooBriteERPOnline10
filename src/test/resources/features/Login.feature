@@ -8,3 +8,6 @@ Feature: Login
     Given user is on the login page
     Then user logs in as purchasing manager
     And user verifies that "Home" page is displayed
+
+
+

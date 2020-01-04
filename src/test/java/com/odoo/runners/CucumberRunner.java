@@ -8,10 +8,11 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = "com/odoo/step_definitions",
+        glue = "com/odoo/stepDefinitions",
         dryRun = false,
         tags = "@CreateOpportunity",
-        plugin = {}
+    
+
 )
 public class CucumberRunner {
 }
