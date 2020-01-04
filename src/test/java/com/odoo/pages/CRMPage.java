@@ -52,12 +52,6 @@ public class CRMPage extends BasePage {
         return verify;
     }
 
-
-
-
-
-
-
 public void setPriority(String priorityLevel){
 
     switch (priorityLevel){
