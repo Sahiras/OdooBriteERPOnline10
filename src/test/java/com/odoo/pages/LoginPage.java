@@ -1,6 +1,5 @@
 package com.odoo.pages;
-
-import com.odoo.utilities.ConfigurationReader;
+import com.odoo.utilities.ConfigurationReader
 import com.odoo.utilities.Driver;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -9,7 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 
 
 
-public class LoginPage {
+public class LoginPage extends BasePage {
+    public LoginPage(){
+
+        PageFactory.initElements(Driver.get(),this);
 
     public LoginPage() {
 
