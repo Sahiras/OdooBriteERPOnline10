@@ -52,12 +52,6 @@ public class CRMPage extends BasePage {
         return verify;
     }
 
-
-
-
-
-
-
 public void setPriority(String priorityLevel){
 
     switch (priorityLevel){
@@ -76,16 +70,5 @@ public void setPriority(String priorityLevel){
             System.out.println("Invalid selection");
     }
 
-
-
-
-
-
 }
-
-
-
-
-
-
 }

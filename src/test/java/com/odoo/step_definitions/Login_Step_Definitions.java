@@ -13,16 +13,15 @@ public class Login_Step_Definitions {
 
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
-        System.out.println("Login page");
+
         Driver.get().get(ConfigurationReader.getProperty("url"));
     }
 
     @Then("user logs in as purchasing manager")
     public void user_logs_in_as_purchasing_manager() {
-        System.out.println("Login as a purschasing manager");
-        String userName = ConfigurationReader.getProperty("user_name");
-        String password = ConfigurationReader.getProperty("password");
-        loginPage.login(userName, password);
+        String user = ConfigurationReader.getProperty("username");
+        String pass = ConfigurationReader.getProperty("password");
+        loginPage.login(user, pass);
     }
 
     @Then("user verifies that {string} page is displayed")

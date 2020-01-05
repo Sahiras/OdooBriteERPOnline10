@@ -17,17 +17,7 @@ public class CRM_Step_Definitions {
 
         CRMPage crmPage = new CRMPage();
 
-    @When("user is login")
-    public void user_is_login() {
 
-        Driver.get().get(ConfigurationReader.getProperty("url"));
-
-        Driver.get().findElement(By.id("login")).sendKeys(ConfigurationReader.getProperty("user_name"));
-
-        Driver.get().findElement(By.id("password")).sendKeys(ConfigurationReader.getProperty("password"));
-
-        Driver.get().findElement(By.cssSelector("[type='submit']")).submit();
-    }
 
     @Then("user navigates to {string} module")
     public void user_navigates_to_module(String string) {
