@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/odoo/step_definitions",
         dryRun = false,
-        tags = "@CreateOpportunity"
+        tags = "@POS_Activities"
     
 
 )
