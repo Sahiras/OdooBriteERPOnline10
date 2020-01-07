@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/odoo/step_definitions",
         dryRun = false,
-        tags = "@POS_Activities"
+        tags = ""
    
         plugin = {"html:target/default-cucumber-reports",
         "json:target/cucumber.json",
