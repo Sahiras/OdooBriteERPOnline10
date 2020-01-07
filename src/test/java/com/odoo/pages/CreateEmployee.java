@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 public class CreateEmployee extends BasePage {
 
 
-    @FindBy(css = "[id^='o_field_input_811']")
+    @FindBy(css = "input[class*='o_field_char o_field_widget o_input o_required_modifier'")
     public WebElement empNameElement;
 
     @FindBy(id = "o_field_input_1810")
@@ -16,16 +16,16 @@ public class CreateEmployee extends BasePage {
     @FindBy(id = "o_field_input_1812")
     public WebElement workAddressElement;
 
-    @FindBy(css = "[id^='o_field_input_815']")
+    @FindBy(css = "input[name*='work_location'")
     public WebElement workLocationElement;
 
-    @FindBy(css = "[id^='o_field_input_816']")
+    @FindBy(css = "input[name*='work_email'")
     public WebElement workEmailElement;
 
-    @FindBy(css = "[id^='o_field_input_817']")
+    @FindBy(css = "input[name*='mobile_phone'")
     public WebElement workMobileElement;
 
-    @FindBy(css = "[id^='o_field_input_818']")
+    @FindBy(css = "input[name*='work_phone'")
     public WebElement workPhoneElement;
 
     @FindBy(id = "o_field_input_1817")
@@ -43,7 +43,7 @@ public class CreateEmployee extends BasePage {
     @FindBy(id = "o_field_input_1822")
     public WebElement workingHoursElement;
 
-    @FindBy(css = "[id^='o_field_input_825']")
+    @FindBy(css = "[name*='notes'")
     public WebElement otherInfoElement;
 
     @FindBy(xpath = "//div//button[contains(text(),'Save')]")
