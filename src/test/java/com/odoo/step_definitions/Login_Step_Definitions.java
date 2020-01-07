@@ -22,11 +22,12 @@ public class Login_Step_Definitions {
         String user = ConfigurationReader.getProperty("username");
         String pass = ConfigurationReader.getProperty("password");
         loginPage.login(user, pass);
+
     }
 
     @Then("user verifies that {string} page is displayed")
     public void user_verifies_that_page_is_displayed(String string) {
-        BrowserUtils.wait(2);
+        BrowserUtils.wait(5);
         System.out.println("Verifying page title: " + string);
     }
 
