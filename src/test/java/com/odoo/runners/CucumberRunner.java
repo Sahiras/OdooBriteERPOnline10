@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com/odoo/step_definitions",
-        dryRun = false,
+        dryRun =false,
         tags ="@Contact",
         plugin = {"html:target/default-cucumber-reports",
         "json:target/cucumber.json",
