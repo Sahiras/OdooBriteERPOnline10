@@ -9,13 +9,12 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com/odoo/step_definitions",
-        dryRun =false,
-        tags ="@Contact",
+
+        dryRun = false,
+        tags = "",
         plugin = {"html:target/default-cucumber-reports",
         "json:target/cucumber.json",
         "rerun:target/rerun.txt"}
-
-
 )
 public class CucumberRunner {
 }
