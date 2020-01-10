@@ -51,12 +51,13 @@ public class Driver {
 
     public static void close() {
 
-        if (driver != null) ;
+        if (driver != null) {
 
-        driver.quit();
+            driver.quit();
 
-        driver = null;
+            driver = null;
+        }
+
     }
-
 }
 
