@@ -38,15 +38,10 @@ public class CRM_Step_Definitions {
 
         BrowserUtils.waitForVisibility(crmPage.opportunityTitle,5);
         crmPage.opportunityTitle.sendKeys(string);
-    }
-
-    @Then("user select {string} from given options")
-    public void user_select_from_given_options(String string) {
-        Select select = new Select(crmPage.dropdown);
-
-        select.selectByVisibleText("!!");
 
     }
+
+
 
     @Then("user enters {string} into expected revenue box")
     public void user_enters_into_expected_revenue_box(String string) {
@@ -58,7 +53,7 @@ public class CRM_Step_Definitions {
     public void user_selects_priority_level_as(String string) {
        crmPage.setPriority(string);
 
-       BrowserUtils.wait(4);
+       BrowserUtils.wait(2);
     }
 
     @Then("user selects create button")
@@ -66,7 +61,7 @@ public class CRM_Step_Definitions {
 
         crmPage.closeDialog.click();
 
-        BrowserUtils.wait(3);
+        BrowserUtils.wait(2);
     }
 
     @Then("user verifies that {string} is displayed")
@@ -76,8 +71,30 @@ public class CRM_Step_Definitions {
 
     }
 
+    //====================================
 
 
+    @Then("user clicks dropdown menu")
+    public void user_clicks_dropdown_menu() {
+        crmPage.dropdown.click();
+        BrowserUtils.wait(2);
+    }
+
+    @Then("user selects Search More")
+    public void user_selects_Search_More() {
+        BrowserUtils.waitForClickablility(crmPage.searchNMore,5);
+        crmPage.searchNMore.click();
+
+
+    }
+
+    @Then("user selects a person and")
+    public void user_selects_a_person_and() {
+
+        BrowserUtils.waitForClickablility(crmPage.selectAPerson,5);
+        crmPage.selectAPerson.click();
+
+    }
 
 
 

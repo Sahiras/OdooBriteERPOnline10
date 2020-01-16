@@ -26,16 +26,27 @@ public class CRMPage extends BasePage {
 
     public WebElement importButton;
 
-    @FindBy(id = "//table/tbody/tr[1]/td[2]/input")
+    @FindBy(xpath = "//table/tbody/tr[1]/td[2]/input")
 
     public WebElement opportunityTitle;
 
-    @FindBy(id = "o_field_input_1791")
+    @FindBy(xpath = "//table/tbody/tr[2]/td[2]/div/div/input")
 
     public WebElement dropdown;
 
-    @FindBy(id = "o_field_input_4362")
+    @FindBy(xpath = "/html/body/ul[1]/li[9]/a")
+    public WebElement createAndEdit;
 
+    @FindBy(xpath = "/html/body/ul[1]/li[8]/a")
+    public WebElement searchNMore;
+
+    @FindBy(xpath = "//table/tbody/tr[10]/td")
+    public WebElement selectAPerson;
+
+    @FindBy(xpath = "//span[text()='Create']")
+    public WebElement create;
+
+    @FindBy(xpath = "//table/tbody/tr[3]/td[2]/div/input")
     public WebElement expectedRevenue;
 
     @FindBy(css = "[name='close_dialog']")
@@ -58,13 +69,13 @@ public void setPriority(String priorityLevel){
 
         case("1"):
 
-            Driver.get().findElement(By.cssSelector("[title='Low']")).click();
+            Driver.get().findElement(By.xpath("//table/tbody/tr[4]/td[2]/div/a[1]")).click();
             break;
         case("2"):
-            Driver.get().findElement(By.cssSelector("[title='High']")).click();
+            Driver.get().findElement(By.xpath("//table/tbody/tr[4]/td[2]/div/a[2]")).click();
             break;
         case("3"):
-            Driver.get().findElement(By.cssSelector("[title='Very High']")).click();
+            Driver.get().findElement(By.xpath("//table/tbody/tr[4]/td[2]/div/a[2]")).click();
 
         default:
             System.out.println("Invalid selection");

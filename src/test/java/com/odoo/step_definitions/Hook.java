@@ -1,9 +1,11 @@
 package com.odoo.step_definitions;
 
 import com.odoo.utilities.Driver;
-import gherkin.ast.Scenario;
-import org.junit.After;
-import org.junit.Before;
+import io.cucumber.core.api.Scenario;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 public class Hook {
 
@@ -15,10 +17,22 @@ public class Hook {
     }
 
     @After
+    public void teardown(Scenario scenario) {
 
-    public void teardown(Scenario scenario){
+        if (scenario.isFailed()) {
+            System.out.println("Test failed!");
 
-        Driver.close();
+
+            byte[] screenshot = ((TakesScreenshot) Driver.get()).getScreenshotAs(OutputType.BYTES);
+
+            scenario.embed(screenshot, "image/png");
+
+            Driver.close();
+        } else {
+
+            Driver.close();
+        }
+
     }
 
 }
