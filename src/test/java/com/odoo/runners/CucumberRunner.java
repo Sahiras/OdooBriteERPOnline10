@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         glue = "com/odoo/step_definitions",
 
         dryRun = false,
-        tags = "",
+        tags = "@CreateOppurtunity_SelectAPerson",
         plugin = {"html:target/default-cucumber-reports",
         "json:target/cucumber.json",
         "rerun:target/rerun.txt"}
